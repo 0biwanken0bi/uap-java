@@ -11,7 +11,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <build>
-    <resources>
+    <!--resources>
       <resource>
         <targetPath>ua_parser</targetPath>
         <directory>${basedir}/../uap-core</directory>
@@ -35,7 +35,7 @@
           <include>*.yaml</include>
         </includes>
       </testResource>
-    </testResources>
+    </testResources-->
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
