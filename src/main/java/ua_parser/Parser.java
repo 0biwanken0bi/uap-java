@@ -37,8 +37,7 @@ public class Parser {
   private static File file;
 
   static {
-    ClassLoader classLoader = Parser.class.getClassLoader();
-    file = new File(classLoader.getResource(REGEX_YAML_PATH).getFile());
+
   }
 
   private UserAgentParser uaParser;
@@ -46,8 +45,9 @@ public class Parser {
   private DeviceParser deviceParser;
 
   public Parser() throws IOException {
-
-    this(new FileInputStream(file));
+    ClassLoader classLoader = Parser.class.getClassLoader();
+    file = new File(classLoader.getResource(REGEX_YAML_PATH).getFile());
+    initialize(new FileInputStream(file));
   }
 
   public Parser(InputStream regexYaml) {
